@@ -27,6 +27,14 @@ RSpec.configure do |config|
     puts ">>>>>>>>>> DEPOIS DE TODA a suíte de testes"
   end
 
+  config.before(:context) do
+    puts ">>>>>>>>>> ANTES DE TODOS os testes"
+  end
+
+  config.after(:all) do
+    puts ">>>>>>>>>> DEPOIS DE TODOS os testes"
+  end
+
   # Helper Methods Module
   config.include Helper
   # rspec-expectations config goes here. You can use an alternate
