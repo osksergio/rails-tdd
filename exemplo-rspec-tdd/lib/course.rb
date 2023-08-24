@@ -1,3 +1,4 @@
+# Course: lesson #43
 class Course
   attr_accessor :name
 
