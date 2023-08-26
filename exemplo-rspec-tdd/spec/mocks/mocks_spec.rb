@@ -12,4 +12,17 @@ describe 'Mocks' do
     # exercise
     student.bar
   end
+
+  it 'args' do
+    student = Student.new
+    expect(student).to receive(:foo).with(123)
+    student.foo(123)
+  end
+
+  it 'repetição' do
+    student = Student.new
+    expect(student).to receive(:foo).with(123).twice
+    student.foo(123)
+    student.foo(123)
+  end
 end
